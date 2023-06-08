@@ -29,3 +29,9 @@ dropDownFunctionForHeading(`two`);
 dropDownFunctionForHeading(`three`);
 dropDownFunctionForHeading(`four`);
 dropDownFunctionForHeading(`five`);
+
+
+$(document).ready(function () {
+  $(window).scrollTop(1);
+});
+
