@@ -51,6 +51,7 @@ $heading2Hover: hsl(14, 88%, 65%);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   z-index: 90;
 
@@ -116,7 +117,6 @@ $heading2Hover: hsl(14, 88%, 65%);
   padding: 1rem;
   transform: translate(-3rem);
 }
-
 // For JavaScript //
 .weight-color {
   color: $headerOneFontColor-dropActiveColor;
@@ -132,96 +132,120 @@ $heading2Hover: hsl(14, 88%, 65%);
 
 @media screen and (max-width: 61.25rem) {
   // Card Container//
-  .card-container {
+  .container {
     display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 37.5rem;
-    min-height: 55rem;
-    background-color: #ffffff;
-    border-radius: 2rem;
-    overflow-x: visible;
-    overflow-y: visible;
-  }
-  //Dropdown Container//
-
-  .dropdown-container {
-    display: flex;
-    flex-direction: column;
-    padding: 0rem 3rem;
-    padding-bottom: 5rem;
-
-    justify-content: center;
-  }
-  // Image Container //
-
-  .img-container {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 90rem;
+    margin: 15rem 0 35rem 0;
 
-    height: 20rem;
-    .mobile-image {
+    .card-container {
       display: flex;
-      transform: translate(0, -12rem);
-      width: 30rem;
+      flex-direction: column;
+      margin: auto;
+      width: 37.5rem;
+      min-height: 55rem;
+      background-color: #ffffff;
+      border-radius: 2rem;
+      overflow: visible;
     }
-    .main-image {
-      display: none;
-    }
-    .box-image {
-      display: none;
-    }
-    .d-pattern {
-      display: none;
-    }
-    .rel {
+    //Dropdown Container//
+
+    .dropdown-container {
       display: flex;
-      width: 30rem;
-      position: fixed;
+      flex-direction: column;
+      padding: 0rem 3rem;
+      padding-bottom: 5rem;
+
+      justify-content: center;
+    }
+    // Image Container //
+
+    .img-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+      height: 30;
+      .mobile-image {
+        display: flex;
+        transform: translate(0, -13rem);
+        width: 30rem;
+      }
+      .main-image {
+        display: none;
+      }
+      .box-image {
+        display: none;
+      }
+      .d-pattern {
+        display: none;
+      }
+      .rel {
+        justify-content: center;
+        width: 30rem;
+        display: flex;
+      }
       .m-pattern {
         display: flex;
-        width: 30rem;
-        transform: translate(0, -3rem);
+        width: inherit;
       }
     }
+    // Dropdown //
+    .dropdown {
+      border-bottom: 0.1rem solid $borderBottomColor;
+    }
+    .header-one {
+      font-size: 3rem;
+      color: $headerOneFontColor-dropActiveColor;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .h2 {
+      display: grid;
+      grid-template-columns: 100% 0%;
+      align-items: center;
+      font-size: 1.2rem;
+      color: $headingTwoNonActiveColor;
+      font-weight: 400;
+      padding: 1.2rem 0;
+      cursor: pointer;
+    }
+
+    .h2:hover {
+      color: $heading2Hover;
+    }
+    .ans {
+      font-size: 1.2rem;
+      color: $paragraphColor;
+      padding-bottom: 1.2rem;
+      transition: all 0.3s ease-in-out;
+    }
+    .down {
+      margin: auto;
+      transition: all 0.3s ease-in-out;
+      padding: 1rem;
+      transform: translate(-3rem);
+    }
+
+    .m-pattern {
+      display: flex;
+      position: absolute;
+      top: 0;
+    }
   }
-  // Dropdown //
-  .dropdown {
-    border-bottom: 0.1rem solid $borderBottomColor;
-  }
-  .header-one {
-    font-size: 3rem;
+  // For JavaScript //
+  .weight-color {
     color: $headerOneFontColor-dropActiveColor;
-    margin-bottom: 3rem;
-    text-align: center;
+    font-weight: 700;
+  }
+  .hidden {
+    display: none;
   }
 
-  .h2 {
-    display: grid;
-    grid-template-columns: 100% 0%;
-    align-items: center;
-    font-size: 1.2rem;
-    color: $headingTwoNonActiveColor;
-    font-weight: 400;
-    padding: 1.2rem 0;
-    cursor: pointer;
-  }
-
-  .h2:hover {
-    color: $heading2Hover;
-  }
-  .ans {
-    font-size: 1.2rem;
-    color: $paragraphColor;
-    padding-bottom: 1.2rem;
-    transition: all 0.3s ease-in-out;
-  }
-  .down {
-    margin: auto;
-    transition: all 0.3s ease-in-out;
-    padding: 1rem;
-    transform: translate(-3rem);
+  .rotate {
+    transform: rotate(180deg) translate(3rem);
   }
 }
